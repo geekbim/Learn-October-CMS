@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{{'assets/img/october.png'|theme}}" width="30" height="30" class="d-inline-block align-top" alt="">
+            October
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="{% if this.page.id == 'homepage' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'homepage' | page}}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="{% if this.page.id == 'movies' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'movies' | page}}">Movies <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="{% if this.page.id == 'list-genres' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'list-genres' | page}}">List Genres <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="{% if this.page.id == 'actors' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'actors' | page}}">List Actors <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="{% if this.page.id == 'blog' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'blog' | page}}">Blog <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="{% if this.page.id == 'contact' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'contact' | page}}">Contact <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="{% if this.page.id == 'add-actors' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'add-actors' | page}}">Add Actors <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="{% if this.page.id == 'login' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'login' | page}}">
+                    
+                        {% if not user %}
+                            Login
+                        {% else %}
+                            My Profile
+                        {% endif %}
+                    
+                        <span class="sr-only">(current)</span></a>
+                </li>
+
+                {% if not user %}
+                <li class="{% if this.page.id == 'register' %}nav-item active{% endif %}">
+                    <a class="nav-link" href="{{'register' | page}}">Register <span class="sr-only">(current)</span></a>
+                </li>
+                {% endif %}
+
+                {% if user %}
+                    <li class="nav-item">
+                        <a href="" class="nav-link" data-request="onLogout" data-request-data="redirect: '/'">Sign Out <span class="sr-only">(current)</span></a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,10 @@
+name: Genres
+form: $/abimanyugatyadhaneswara/movies/models/genre/fields.yaml
+modelClass: AbimanyuGatyaDhaneswara\Movies\Models\Genre
+defaultRedirect: abimanyugatyadhaneswara/movies/genres
+create:
+    redirect: 'abimanyugatyadhaneswara/movies/genres/update/:id'
+    redirectClose: abimanyugatyadhaneswara/movies/genres
+update:
+    redirect: abimanyugatyadhaneswara/movies/genres
+    redirectClose: abimanyugatyadhaneswara/movies/genres

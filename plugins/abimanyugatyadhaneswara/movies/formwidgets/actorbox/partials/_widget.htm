@@ -1,0 +1,22 @@
+<style>
+    .select2-container {
+        width: 100% !important;
+        display: block;
+    }
+</style>
+
+<select class="s2" name="<?= $name ?>" multiple>
+    <?php foreach($actors as $key => $value) : ?>
+        <option value="<?= $key ?>" <?= in_array($key, $selectedValues) ? 'selected="selected"' : ''; ?>><?= $value ?></option>
+    <?php endforeach; ?>
+</select>
+<span style="font-size: 10px; color: red;">*Harus mengisi first name dan last name dengan pembatas spasi (namadepan namabelakang)</span>
+
+<script>
+    $(document).on('render', function () { 
+        $('.s2').select2({
+            placeholder: 'Add Actors',
+            tags: true
+        })
+    })
+</script>

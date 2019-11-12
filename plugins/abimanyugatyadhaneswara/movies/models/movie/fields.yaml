@@ -1,0 +1,53 @@
+fields:
+    name:
+        label: 'Movies Title'
+        span: full
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: richeditor
+    year:
+        label: Year
+        span: auto
+        type: number
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    poster:
+        label: 'Movie Poster'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    movie_gallery:
+        label: 'Movie Gallery'
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    genres:
+        label: Genres
+        nameFrom: genre_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    actors:
+        label: Actors
+        span: left
+        type: actorbox

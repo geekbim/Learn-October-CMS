@@ -1,0 +1,12 @@
+title = "Add Actors"
+url = "/add-actors"
+layout = "default"
+is_hidden = 0
+
+[actorform]
+
+[session]
+security = "user"
+redirect = "login"
+==
+{% component 'actorform' %}{% component 'session' %}

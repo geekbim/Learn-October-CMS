@@ -1,0 +1,75 @@
+title = "Movies Detail"
+url = "/movies/movie/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "AbimanyuGatyaDhaneswara\Movies\Models\Movie"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+<div class="container home-body">
+    <h3 class="text-primary mt-4">
+        {{record.name}}
+    </h3>
+
+    <br><img src="{{record.poster.path}}" width="200" height="auto" alt="poster movie"><br><br>
+
+    <h5>
+        Year : {{record.year}}
+    </h5>
+
+    <hr>
+
+    <h5>
+        Description : 
+            {{record.description | raw}}
+    </h5>
+
+    <hr>
+
+    <h5>
+        Actors : 
+            <ul>
+                {% for actor in record.actors %}
+                    <li>name : {{actor.name}} {{actor.lastname}}</li>
+                {% endfor %}
+            </ul>
+    </h5>
+
+    <hr>
+
+    <h5>Gallery</h5>
+    <div class="card">
+        <ul>
+            {% for img in record.movie_gallery %}
+                <a href="{{img.path}}">
+                    <img src="{{img.path}}" width="80" height="80" alt="Movie Gallery" class="mt-3 mx-3">
+                </a>
+            {% endfor %} 
+        </ul>
+    </div>
+
+    <br><br>
+
+    <h5>Genres</h5>
+    
+    <ul>
+        {% for genre in record.genres %}
+        <li>
+            <a href="/genres/{{genre.slug}}">{{genre.genre_title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

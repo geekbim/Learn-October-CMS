@@ -1,0 +1,34 @@
+<div class="container home-body">
+    <h2>Actor Form Page</h2>
+    
+    <!-- <form data-request = 'onSave'> -->
+    <form method="POST" action="{{url('add-actors')}}" accept-charset="UTF8" enctype="multipart/form-data">
+
+        <input type="hidden" name="_handler" value="onSave">
+        {{form_token()}}
+        {{form_sessionKey()}}
+
+        <div class="form-group">
+            <label for="name">Actor Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter actor name" required autocomplete="off">
+            <!-- <span class="text-danger">{{errors.first('name')}}</span> -->
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">Actor Last Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter actor last name" required autocomplete="off">
+            <!-- <span class="text-danger">{{errors.first('email')}}</span> -->
+        </div>
+
+        <div class="form-group">
+            <label for="actorimage">Actor Image <span class="text-danger">*</span></label>
+            <input type="file" class="form-control-file" id="actorimage" name="actorimage" required>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button><br>
+
+        {% flash success %}
+            <span>{{message}}</span>
+        {% endflash %}
+    </form>
+</div>

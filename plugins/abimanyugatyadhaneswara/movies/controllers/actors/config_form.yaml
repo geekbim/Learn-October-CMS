@@ -1,0 +1,10 @@
+name: Actors
+form: $/abimanyugatyadhaneswara/movies/models/actor/fields.yaml
+modelClass: AbimanyuGatyaDhaneswara\Movies\Models\Actor
+defaultRedirect: abimanyugatyadhaneswara/movies/actors
+create:
+    redirect: 'abimanyugatyadhaneswara/movies/actors/update/:id'
+    redirectClose: abimanyugatyadhaneswara/movies/actors
+update:
+    redirect: abimanyugatyadhaneswara/movies/actors
+    redirectClose: abimanyugatyadhaneswara/movies/actors

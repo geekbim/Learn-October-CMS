@@ -1,0 +1,18 @@
+title = "Actors"
+url = "/actors"
+layout = "default"
+is_hidden = 0
+
+[actors]
+results = 5
+sortOrder = "name desc"
+==
+{% set actors = actors . actors %}
+
+<div class="home-body">
+    <ul>
+        {% for actor in actors %}
+            <li>{{actor.name}} {{actor.lastname}}</li>
+        {% endfor %}
+    </ul>
+</div>

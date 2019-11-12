@@ -1,0 +1,10 @@
+name: Movies
+form: $/abimanyugatyadhaneswara/movies/models/movie/fields.yaml
+modelClass: AbimanyuGatyaDhaneswara\Movies\Models\Movie
+defaultRedirect: abimanyugatyadhaneswara/movies/movies
+create:
+    redirect: 'abimanyugatyadhaneswara/movies/movies/update/:id'
+    redirectClose: abimanyugatyadhaneswara/movies/movies
+update:
+    redirect: abimanyugatyadhaneswara/movies/movies
+    redirectClose: abimanyugatyadhaneswara/movies/movies

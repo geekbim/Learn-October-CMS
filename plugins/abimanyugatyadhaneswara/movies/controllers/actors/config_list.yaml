@@ -1,0 +1,12 @@
+list: $/abimanyugatyadhaneswara/movies/models/actor/columns.yaml
+modelClass: AbimanyuGatyaDhaneswara\Movies\Models\Actor
+title: Actors
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'abimanyugatyadhaneswara/movies/actors/update/:id'

@@ -1,0 +1,22 @@
+{
+  "name": "octobermovies",
+  "version": "1.0.0",
+  "description": "Laravel Elixir",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/abimgatya/Learn-October-CMS.git)"
+  },
+  "author": "abim_gatya",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-elixir": "^6.0.0-18",
+    "laravel-elixir-livereload": "^1.1.6"
+  }
+}

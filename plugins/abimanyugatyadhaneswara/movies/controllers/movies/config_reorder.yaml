@@ -1,0 +1,4 @@
+title: Movies
+modelClass: AbimanyuGatyaDhaneswara\Movies\Models\Movie
+toolbar:
+    buttons: reorder_toolbar

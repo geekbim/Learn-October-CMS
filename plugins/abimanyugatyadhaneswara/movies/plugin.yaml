@@ -1,0 +1,20 @@
+plugin:
+    name: 'abimanyugatyadhaneswara.movies::lang.plugin.name'
+    description: 'abimanyugatyadhaneswara.movies::lang.plugin.description'
+    author: 'Abimanyu Gatya Dhaneswara'
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Movies
+        url: abimanyugatyadhaneswara/movies/movies
+        icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: abimanyugatyadhaneswara/movies/genres
+                icon: icon-tag
+            side-menu-item2:
+                label: Actors
+                url: abimanyugatyadhaneswara/movies/actors
+                icon: icon-users

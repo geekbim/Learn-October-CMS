@@ -1,0 +1,4 @@
+title: Actors
+modelClass: AbimanyuGatyaDhaneswara\Movies\Models\Actor
+toolbar:
+    buttons: reorder_toolbar

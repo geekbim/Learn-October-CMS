@@ -1,0 +1,33 @@
+title = "Genres Movie"
+url = "/genres/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "AbimanyuGatyaDhaneswara\Movies\Models\Genre"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "genre_title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+<div class="container home-body">
+    {% if record %}
+        <h2>
+            {{ attribute(record, displayColumn) }}
+        </h2>
+
+        <ul>
+            {% for movie in record.movies %}
+                <li><a href="/movies/movie/{{movie.slug}}">{{movie.name}}</a></li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        {{ notFoundMessage }}
+    {% endif %}
+</div>

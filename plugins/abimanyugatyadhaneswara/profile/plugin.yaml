@@ -1,0 +1,6 @@
+plugin:
+    name: 'abimanyugatyadhaneswara.profile::lang.plugin.name'
+    description: 'abimanyugatyadhaneswara.profile::lang.plugin.description'
+    author: 'Abimanyu Gatya Dhaneswara'
+    icon: oc-icon-user
+    homepage: ''
